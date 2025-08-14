@@ -7,7 +7,9 @@ const LoginPage = ()=>{
     const navigate = useNavigate();
 
 
-    const handleLogin = ()=>{
+    const handleLogin = (e)=>{
+        
+        e.preventDefault();
 
         const storedEmail = "abdelfadelsaliou@gmail.com";
         const storedPassword = "abdel";
@@ -48,7 +50,7 @@ const LoginPage = ()=>{
                 />
 
                 
-                <button className="w-1/2 py-4 bg-[#84C7AE] text-white text-lg font-medium rounded cursor-pointer hover:bg-[#6bbfa1] transition" onClick={handleLogin}>
+                <button className="w-1/2 py-4 bg-[#84C7AE] text-white text-lg font-medium rounded cursor-pointer hover:bg-[#6bbfa1] transition" onSubmit={handleLogin}>
                     Log In
                 </button>
 
